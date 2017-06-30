@@ -1,0 +1,35 @@
+---
+layout: default
+lang: ru
+---
+<div class="page-content">
+  <div class="mdl-grid">
+
+
+    {% for post in paginator.posts %}
+
+    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
+        <a class="titlepostt" href="{{ post.url | prepend: site.baseurl }}">
+      <div class="mdl-card__title" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
+
+<h2 class="gltitl"><span class="mdl-card__title-text uniform-bg"><span>{{ post.title }}</span></span></h2>
+      </div>
+
+
+
+</a>
+    </div>
+
+
+
+
+
+    {% endfor %}
+
+
+
+
+
+
+  </div>
+</div>

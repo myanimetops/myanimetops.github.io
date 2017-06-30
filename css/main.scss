@@ -1,0 +1,77 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+//
+// Main sass file, to import all styles
+//
+
+@charset "utf-8";
+
+$spacing-unit:     30px;
+$super-search:     rgba(0, 191, 255, 0.85);
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "post",
+        "search"
+;
+
+.titlepostt{
+  text-align: center;
+  text-decoration: none;
+
+}
+.mdl-card{
+      min-height: 10px;
+}
+.pagination{
+  margin-left: 50%;
+}
+
+.img{
+  width: 100%;
+
+}
+.posttitl{
+  text-align: center;
+  margin: .3rem 0 1rem 1rem;
+
+    font-size: 3rem;
+}
+h4{
+  text-align: center;
+}
+h6{
+  text-align: center;
+  margin-top: .3rem;
+  font-weight: 500;
+  margin-bottom: .1rem
+
+}
+p{
+      font-size: 1.3rem;
+      // letter-spacing: .1rem;
+
+}
+
+.gltitl{
+  margin-top: 9rem;
+}
+
+.uniform-bg {
+background-color: #424242;
+position:relative;
+outline: #424242 solid 0.3em;
+-moz-outline-offset:-0.04em;
+}
+
+.uniform-bg span {
+position:relative;
+}

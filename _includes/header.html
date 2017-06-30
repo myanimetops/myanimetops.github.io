@@ -1,0 +1,33 @@
+  <header class="mdl-layout__header">
+
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">{{ site.title }}</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+
+
+
+
+
+
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-lower-left">
+        {% for option in site.more_vert %}
+        <li><a href="{{ option[1].link }}" class="mdl-menu__item">{{ option[1].name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </header>
+
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Меню</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="{{ site.baseurl }}/">Главная страница</a>
+        {% for post in site.categories.anime-pro %}
+        {% if post.title %}
+        <a class="mdl-navigation__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% endif %}
+        {% endfor %}
+    </nav>
+
+  </div>
